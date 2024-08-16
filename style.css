@@ -51,62 +51,86 @@ body {
 }
 
 #input-value {
-    width: 120px;
+    width: 80%;
     height: 86px;
     background: transparent;
-    border: 1px solid #fff;
     color: #fff;
-    font-size: 58px;
+    border: none;
+    font-size: 78px;
     font-weight: bolder;
     text-align: center;
     border-radius: 4px;
     outline: none;
     margin-top: 0;
+    transition: background .3s;
+}
+
+#input-value:hover,
+#input-value:focus {
+    outline: none;
+    background: rgba(0, 0, 0, .1);
 }
 
 #convert-btn {
     width: 120px;
     height: 40px;
-    background: hsl(264, 45%, 98%);
     border: none;
-    color: #3D3D3D;
+    color: #CCC1FF;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
     border-radius: 4px;
+    background-image: linear-gradient(
+        45deg,
+        hsl(283deg 100% 20%) 0%,
+        hsl(280deg 100% 23%) 11%,
+        hsl(277deg 100% 26%) 22%,
+        hsl(275deg 100% 29%) 33%,
+        hsl(272deg 100% 32%) 44%,
+        hsl(269deg 100% 35%) 56%,
+        hsl(265deg 100% 39%) 67%,
+        hsl(262deg 100% 42%) 78%,
+        hsl(257deg 100% 46%) 89%,
+        hsl(252deg 100% 50%) 100%
+    );
+}
+
+#convert-btn:hover {
+    background: rgba(0, 0, 0, .1);
+    color: #f0f0f0;
 }
 
 .container_bot {
     background: #1F2937;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1, 1fr;
+    grid-template-rows: repeat(auto, 1fr);
     width: 100%;
     height: 60%;
-    gap: 20px;  
 }
 
-.container_result {
+div {
     background: #273549;
     width: 90%;
-    height: 100px;
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin: auto;
 }
 
-.subtitle {
-    color: #CCC1FF;
+h2 {
+    color: #cdc9e0;
     font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 0;
+    font-weight: 700;
+    margin: 0;
 }
 
-.convert_text {
-    color: #fff;
+p {
+    color: #d8d8d8;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 300;
     margin-bottom: 0;
 }
